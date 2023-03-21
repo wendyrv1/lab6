@@ -20,7 +20,7 @@ def encode(password):
 # Annika's changes
 def decode(password):
     edp = ""
-    dictionary = {"9":"6", "8":"5", "7":"4", "6":"3", "5":"2", "4":"1", "3":"0", "2":"9", "1":8, "0":"7"}
+    dictionary = {"9":"6", "8":"5", "7":"4", "6":"3", "5":"2", "4":"1", "3":"0", "2":"9", "1":"8", "0":"7"}
     for x in password:
         edp = edp + dictionary[str(x)]
             #str((int(x) - 3))
