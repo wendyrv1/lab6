@@ -9,11 +9,23 @@ def encode(password):
         epassword += ex
     return epassword
 
-def decode(password):
+
+"""def decode(password):
     edp = ""
     for x in password:
         edp += str((int(x) - 3))
+    return edp"""
+
+
+# Annika's changes
+def decode(password):
+    edp = ""
+    dictionary = {"9":"6", "8":"5", "7":"4", "6":"3", "5":"2", "4":"1", "3":"0", "2":"9", "1":8, "0":"7"}
+    for x in password:
+        edp = edp + dictionary[str(x)]
+            #str((int(x) - 3))
     return edp
+
 
 #display menu with the options
 def main():
