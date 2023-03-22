@@ -4,10 +4,17 @@ password = None
 #encode password as encoded password
 def encode(password):
     epassword = ""
+    dict = {"7":"0", "8":"1","9":"2"}
     for x in password:
-        ex = str((int(x) + 3))
-        epassword += ex
+        if int(x) < 7:
+            ex = int(x) + 3
+            epassword += str(ex)
+        elif x in dict:
+            epassword += dict[x]
+        else:
+            epassword += x
     return epassword
+
 
 
 """def decode(password):
